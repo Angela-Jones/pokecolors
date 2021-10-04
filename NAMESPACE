@@ -1,2 +1,4 @@
 exportPattern("^[[:alpha:]]+")
 importFrom("graphics", "axis", "image", "par", "rect", "text")
+import(scales)
+import(ggplot2)
