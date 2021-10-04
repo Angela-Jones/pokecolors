@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-Color palettes based on Gen 1 and Gen 2 Pokémon for use in R.
+Color palettes based on [Gen I](https://pokemon.fandom.com/wiki/List_of_Generation_I_Pok%C3%A9mon) and [Gen II](https://pokemon.fandom.com/wiki/List_of_Generation_II_Pok%C3%A9mon) Pokémon for use in R.
 Package inspiration from [Barry Mode](https://github.com/BarryMode/pokepalettes) and [Jared Huling](https://github.com/jaredhuling/jcolors).
 
 # Installation

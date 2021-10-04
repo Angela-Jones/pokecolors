@@ -6,9 +6,13 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-Color palettes based on Gen 1 and Gen 2 Pokémon for use in R. Package
-inspiration from [Barry Mode](https://github.com/BarryMode/pokepalettes)
-and [Jared Huling](https://github.com/jaredhuling/jcolors).
+Color palettes based on [Gen
+I](https://pokemon.fandom.com/wiki/List_of_Generation_I_Pok%C3%A9mon)
+and [Gen
+II](https://pokemon.fandom.com/wiki/List_of_Generation_II_Pok%C3%A9mon)
+Pokémon for use in R. Package inspiration from [Barry
+Mode](https://github.com/BarryMode/pokepalettes) and [Jared
+Huling](https://github.com/jaredhuling/jcolors).
 
 # Installation
 
@@ -41,9 +45,9 @@ Access a random color palette:
 
 ``` r
 pokecolors('random')
-#>  [1] "#57656e" "#24141d" "#95a19d" "#8495a1" "#272f34" "#646c6a" "#565753"
-#>  [8] "#151817" "#9f9f9e" "#1c1b1b" "#e1e2de" "#cfdbd8" "#b2c5bf" "#708191"
-#> [15] "#cbd6db" "#343f4e"
+#>  [1] "#2e271e" "#725f4e" "#b59777" "#59595b" "#5f6161" "#96756d" "#878a88"
+#>  [8] "#272728" "#997e5f" "#272827" "#f7cbe4" "#f6cd97" "#4d402e" "#bb8c99"
+#> [15] "#868789" "#e4c48f"
 ```
 
 # Display color palettes
