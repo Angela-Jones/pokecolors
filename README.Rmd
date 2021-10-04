@@ -1,0 +1,127 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# `pokecolors
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Color palettes based on Gen 1 and Gen 2 Pokémon for use in R.
+
+## Installation
+
+You can install the development version of `pokecolors` from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("Angela-Jones/pokecolors")
+```
+# Get color palettes
+
+Access the `pokecolors` color palettes by name or number with `pokecolors()`:
+
+```{r message = FALSE, warning = FALSE}
+library(pokecolors)
+pokecolors('squirtle')
+pokecolors('007')
+```
+
+Access a random color palette:
+
+```{r eval = TRUE, message = FALSE, warning = FALSE}
+pokecolors('random')
+```
+
+
+# Display color palettes
+
+Color palettes can be displayed using `display_pokecolors()`
+
+## Bulbasaur
+```{r}
+display_pokecolors("bulbasaur")
+```
+
+## Charmander
+```{r}
+display_pokecolors("charmander")
+```
+
+## Squirtle
+```{r}
+display_pokecolors("squirtle")
+```
+
+
+# Use palettes with `ggplot2`
+
+Now use `scale_color_pokecolors()` with `ggplot2`:
+
+```{r eval = TRUE, message = FALSE, warning = FALSE}
+library(ggplot2)
+library(gridExtra)
+data(morley)
+pltl <- ggplot(data = morley, aes(x = Run, y = Speed,
+group = factor(Expt),
+colour = factor(Expt))) +
+    geom_line(size = 2) +
+    theme_bw() +
+    theme(panel.background = element_rect(fill = "grey97"),
+          panel.border = element_blank(),
+          legend.position = "bottom")
+pltd <- ggplot(data = morley, aes(x = Run, y = Speed,
+group = factor(Expt),
+colour = factor(Expt))) +
+    geom_line(size = 2) +
+    theme_bw() +
+    theme(panel.background = element_rect(fill = "grey15"),
+          legend.key = element_rect(fill = "grey15"),
+          panel.border = element_blank(),
+          panel.grid.major = element_line(color = "grey45"),
+          panel.grid.minor = element_line(color = "grey25"),
+          legend.position = "bottom")
+grid.arrange(pltl + scale_color_pokecolors(palette = "squirtle"),
+             pltd + scale_color_pokecolors(palette = "squirtle"), ncol = 2)
+grid.arrange(pltl + scale_color_pokecolors(palette = "charmander"),
+             pltd + scale_color_pokecolors(palette = "charmander"), ncol = 2)
+```
+
+
+## More example plots
+
+```{r moreplots}
+grid.arrange(pltl + scale_color_pokecolors(palette = "bulbasaur"),
+             pltd + scale_color_pokecolors(palette = "bulbasaur"), ncol = 2)
+grid.arrange(pltl + scale_color_pokecolors(palette = "pikachu"),
+             pltd + scale_color_pokecolors(palette = "pikachu") + 
+                 theme(panel.background = element_rect(fill = "grey5")), ncol = 2)
+grid.arrange(pltl + scale_color_pokecolors(palette = "magikarp"),
+             pltd + scale_color_pokecolors(palette = "magikarp"), ncol = 2)
+pltd <- ggplot(data = OrchardSprays, aes(x = rowpos, y = decrease,
+group = factor(treatment),
+colour = factor(treatment))) +
+    geom_line(size = 2) +
+    geom_point(size = 4) +
+    theme_bw() +
+    theme(panel.background = element_rect(fill = "grey15"),
+          legend.key = element_rect(fill = "grey15"),
+          panel.border = element_blank(),
+          panel.grid.major = element_line(color = "grey45"),
+          panel.grid.minor = element_line(color = "grey25"),
+          legend.position = "bottom")
+pltd + scale_color_pokecolors(palette = "jigglypuff")
+```
+
+
