@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# `pokecolors`
+# `PokePals`
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -16,26 +16,26 @@ Huling](https://github.com/jaredhuling/jcolors).
 
 # Installation
 
-You can install the development version of `pokecolors` from
+You can install the development version of `pokepals` from
 [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("Angela-Jones/pokecolors")
+devtools::install_github("Angela-Jones/pokepals")
 ```
 
 # Get color palettes
 
-Access the `pokecolors` color palettes by name or number with
-`pokecolors()`:
+Access the `pokepals` color palettes by name or number with
+`pokepals()`:
 
 ``` r
-library(pokecolors)
-pokecolors('squirtle')
+library(pokepals)
+pokepals('squirtle')
 #>  [1] "#1a343c" "#1e2e2d" "#3a7589" "#58b3d2" "#5fb2b0" "#3f706f" "#244a57"
 #>  [8] "#4a96a1" "#71e3fd" "#559d9c" "#7edfde" "#c3aa82" "#dfc793" "#ecd5a5"
 #> [15] "#786648" "#2e4a4a"
-pokecolors('007')
+pokepals('007')
 #>  [1] "#1a343c" "#1e2e2d" "#3a7589" "#58b3d2" "#5fb2b0" "#3f706f" "#244a57"
 #>  [8] "#4a96a1" "#71e3fd" "#559d9c" "#7edfde" "#c3aa82" "#dfc793" "#ecd5a5"
 #> [15] "#786648" "#2e4a4a"
@@ -44,20 +44,20 @@ pokecolors('007')
 Access a random color palette:
 
 ``` r
-pokecolors('random')
-#>  [1] "#2e271e" "#725f4e" "#b59777" "#59595b" "#5f6161" "#96756d" "#878a88"
-#>  [8] "#272728" "#997e5f" "#272827" "#f7cbe4" "#f6cd97" "#4d402e" "#bb8c99"
-#> [15] "#868789" "#e4c48f"
+pokepals('random')
+#>  [1] "#606c4d" "#466138" "#10140f" "#0c1c1d" "#252c1b" "#9caa7f" "#e5f3c1"
+#>  [8] "#364927" "#87ab72" "#32667a" "#6e9553" "#bbce97" "#80955e" "#3e482d"
+#> [15] "#aecd9b" "#c6e4b9"
 ```
 
 # Display color palettes
 
-Color palettes can be displayed using `display_pokecolors()`
+Color palettes can be displayed using `display_pokepals()`
 
 ## Bulbasaur
 
 ``` r
-display_pokecolors("bulbasaur")
+display_pokepals("bulbasaur")
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
@@ -65,7 +65,7 @@ display_pokecolors("bulbasaur")
 ## Charmander
 
 ``` r
-display_pokecolors("charmander")
+display_pokepals("charmander")
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
@@ -73,14 +73,14 @@ display_pokecolors("charmander")
 ## Squirtle
 
 ``` r
-display_pokecolors("squirtle")
+display_pokepals("squirtle")
 ```
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 # Use palettes with `ggplot2`
 
-Now use `scale_color_pokecolors()` with `ggplot2`:
+Now use `scale_color_pokepals()` with `ggplot2`:
 
 ``` r
 library(ggplot2)
@@ -105,15 +105,15 @@ colour = factor(Expt))) +
           panel.grid.major = element_line(color = "grey45"),
           panel.grid.minor = element_line(color = "grey25"),
           legend.position = "bottom")
-grid.arrange(pltl + scale_color_pokecolors(palette = "squirtle"),
-             pltd + scale_color_pokecolors(palette = "squirtle"), ncol = 2)
+grid.arrange(pltl + scale_color_pokepals(palette = "squirtle"),
+             pltd + scale_color_pokepals(palette = "squirtle"), ncol = 2)
 ```
 
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
 ``` r
-grid.arrange(pltl + scale_color_pokecolors(palette = "charmander"),
-             pltd + scale_color_pokecolors(palette = "charmander"), ncol = 2)
+grid.arrange(pltl + scale_color_pokepals(palette = "charmander"),
+             pltd + scale_color_pokepals(palette = "charmander"), ncol = 2)
 ```
 
 <img src="man/figures/README-unnamed-chunk-7-2.png" width="100%" />
@@ -121,23 +121,23 @@ grid.arrange(pltl + scale_color_pokecolors(palette = "charmander"),
 ## More example plots
 
 ``` r
-grid.arrange(pltl + scale_color_pokecolors(palette = "bulbasaur"),
-             pltd + scale_color_pokecolors(palette = "bulbasaur"), ncol = 2)
+grid.arrange(pltl + scale_color_pokepals(palette = "bulbasaur"),
+             pltd + scale_color_pokepals(palette = "bulbasaur"), ncol = 2)
 ```
 
 <img src="man/figures/README-moreplots-1.png" width="100%" />
 
 ``` r
-grid.arrange(pltl + scale_color_pokecolors(palette = "pikachu"),
-             pltd + scale_color_pokecolors(palette = "pikachu") + 
+grid.arrange(pltl + scale_color_pokepals(palette = "pikachu"),
+             pltd + scale_color_pokepals(palette = "pikachu") + 
                  theme(panel.background = element_rect(fill = "grey5")), ncol = 2)
 ```
 
 <img src="man/figures/README-moreplots-2.png" width="100%" />
 
 ``` r
-grid.arrange(pltl + scale_color_pokecolors(palette = "magikarp"),
-             pltd + scale_color_pokecolors(palette = "magikarp"), ncol = 2)
+grid.arrange(pltl + scale_color_pokepals(palette = "magikarp"),
+             pltd + scale_color_pokepals(palette = "magikarp"), ncol = 2)
 ```
 
 <img src="man/figures/README-moreplots-3.png" width="100%" />
@@ -155,7 +155,7 @@ colour = factor(treatment))) +
           panel.grid.major = element_line(color = "grey45"),
           panel.grid.minor = element_line(color = "grey25"),
           legend.position = "bottom")
-pltd + scale_color_pokecolors(palette = "jigglypuff")
+pltd + scale_color_pokepals(palette = "jigglypuff")
 ```
 
 <img src="man/figures/README-moreplots-4.png" width="100%" />
